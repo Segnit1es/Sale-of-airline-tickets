@@ -1,0 +1,515 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QTabWidget" name="tabWidget">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>801</width>
+      <height>571</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Segoe UI</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::LayoutDirection::LeftToRight</enum>
+    </property>
+    <property name="tabPosition">
+     <enum>QTabWidget::TabPosition::West</enum>
+    </property>
+    <property name="tabShape">
+     <enum>QTabWidget::TabShape::Rounded</enum>
+    </property>
+    <property name="currentIndex">
+     <number>3</number>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>16</width>
+      <height>16</height>
+     </size>
+    </property>
+    <property name="elideMode">
+     <enum>Qt::TextElideMode::ElideNone</enum>
+    </property>
+    <property name="documentMode">
+     <bool>false</bool>
+    </property>
+    <property name="tabsClosable">
+     <bool>false</bool>
+    </property>
+    <property name="movable">
+     <bool>false</bool>
+    </property>
+    <property name="tabBarAutoHide">
+     <bool>false</bool>
+    </property>
+    <widget class="QWidget" name="tab">
+     <property name="layoutDirection">
+      <enum>Qt::LayoutDirection::LeftToRight</enum>
+     </property>
+     <attribute name="title">
+      <string>Пассажиры</string>
+     </attribute>
+     <widget class="QGroupBox" name="passengersBox">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>781</width>
+        <height>611</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Функции заблокированы. Создайте или выберите базу данных</string>
+      </property>
+      <widget class="QWidget" name="layoutWidget">
+       <property name="geometry">
+        <rect>
+         <x>12</x>
+         <y>51</y>
+         <width>271</width>
+         <height>331</height>
+        </rect>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <item>
+         <widget class="QPushButton" name="addPassenger">
+          <property name="minimumSize">
+           <size>
+            <width>221</width>
+            <height>41</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <family>Segoe UI</family>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Добавить пассажира</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="removePassenger">
+          <property name="minimumSize">
+           <size>
+            <width>221</width>
+            <height>41</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>Удалить пассажира</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="displayAllPassenger">
+          <property name="minimumSize">
+           <size>
+            <width>221</width>
+            <height>41</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>Вывести всех пассажиров</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="clearPassenger">
+          <property name="minimumSize">
+           <size>
+            <width>221</width>
+            <height>41</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>Очистить список пассажиров</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label">
+          <property name="minimumSize">
+           <size>
+            <width>221</width>
+            <height>31</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>Поиск по паспорту:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="passportNumberEdit">
+          <property name="minimumSize">
+           <size>
+            <width>221</width>
+            <height>31</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_2">
+          <property name="minimumSize">
+           <size>
+            <width>221</width>
+            <height>31</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>Поиск по ФИО</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="fullNameEdit">
+          <property name="minimumSize">
+           <size>
+            <width>221</width>
+            <height>31</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+     <widget class="QTableView" name="passengerTable">
+      <property name="geometry">
+       <rect>
+        <x>291</x>
+        <y>41</y>
+        <width>461</width>
+        <height>481</height>
+       </rect>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_2">
+     <attribute name="title">
+      <string>Рейсы</string>
+     </attribute>
+     <widget class="QGroupBox" name="flightBox">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>771</width>
+        <height>601</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Функции заблокированы. Создайте или выберите базу данных</string>
+      </property>
+      <widget class="QWidget" name="layoutWidget">
+       <property name="geometry">
+        <rect>
+         <x>2</x>
+         <y>41</y>
+         <width>291</width>
+         <height>281</height>
+        </rect>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item>
+         <widget class="QPushButton" name="addFlight">
+          <property name="minimumSize">
+           <size>
+            <width>251</width>
+            <height>31</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>Добавить рейс</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="removeFlight">
+          <property name="minimumSize">
+           <size>
+            <width>251</width>
+            <height>31</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>Удалить рейс</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="displayAllFlight">
+          <property name="minimumSize">
+           <size>
+            <width>251</width>
+            <height>31</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>Вывести все авиарейсы</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="clearFlight">
+          <property name="minimumSize">
+           <size>
+            <width>251</width>
+            <height>31</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>Очистить данные об авиарейсах</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_4">
+          <property name="minimumSize">
+           <size>
+            <width>251</width>
+            <height>31</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>Поиск по номеру авирейса</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="flightNumberEdit">
+          <property name="minimumSize">
+           <size>
+            <width>251</width>
+            <height>31</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_3">
+          <property name="minimumSize">
+           <size>
+            <width>251</width>
+            <height>31</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>Поиск по аэропорту прибытия</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="destinationEdit">
+          <property name="minimumSize">
+           <size>
+            <width>251</width>
+            <height>31</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+     <widget class="QTableView" name="flightTable">
+      <property name="geometry">
+       <rect>
+        <x>300</x>
+        <y>30</y>
+        <width>451</width>
+        <height>491</height>
+       </rect>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_4">
+     <attribute name="title">
+      <string>Билеты</string>
+     </attribute>
+     <widget class="QGroupBox" name="ticketBox">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>761</width>
+        <height>611</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Функции заблокированы. Создайте или выберите базу данных</string>
+      </property>
+      <widget class="QPushButton" name="returnTicket">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>310</y>
+         <width>311</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>311</width>
+         <height>41</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>Регистрация возврата авиабилета</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="sellTicket">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>220</y>
+         <width>311</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>311</width>
+         <height>41</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>Регистрация продажи авиабилета</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QTableView" name="availableFlightTable">
+      <property name="geometry">
+       <rect>
+        <x>341</x>
+        <y>31</y>
+        <width>411</width>
+        <height>491</height>
+       </rect>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_3">
+     <attribute name="title">
+      <string>Настройки</string>
+     </attribute>
+     <widget class="QPushButton" name="createBD">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>30</y>
+        <width>221</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Создать базу данных</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="deleteBD">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>180</y>
+        <width>221</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Удалить базу данных</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="uploadBD">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>80</y>
+        <width>221</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Загрузить базу данных</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="copyBD">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>130</y>
+        <width>221</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Создать копию базы данных</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="currentBD">
+      <property name="geometry">
+       <rect>
+        <x>260</x>
+        <y>30</y>
+        <width>351</width>
+        <height>151</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Текущая база данных: отсутствует </string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="saveDB">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>230</y>
+        <width>221</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Сохранить базу данных</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
